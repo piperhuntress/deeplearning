@@ -50,7 +50,7 @@ def upload_file():
 
 # App Information
 st.title("VGG16-CNN-Classification")
-st.header("Developed by: Jasmine")
+st.write("Developed by: Jasmine")
 
 app_desc = "This Streamlit-based image classification app uses the VGG16 Convolutional Neural Network (CNN) pre-trained on the ImageNet dataset to identify objects in uploaded images. The app accepts JPG/PNG images, resizes them to 224x224 pixels, and preprocesses them using Keras utilitie. Predictions are generated via TensorFlow/Keras, and the top 3 class labels with confidence scores are displayed. The interface is built with Streamlit, utilizing components like file uploaders, columns, and image display for a simple and interactive user experience."
 
