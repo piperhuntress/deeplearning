@@ -26,8 +26,9 @@ def upload_file():
 # Function for loading model
 @st.cache_resource  # (cached for performance)
 def load_model():
-    # model = "https://www.kaggle.com/models/tensorflow/ssd-mobilenet-v2/TensorFlow2/fpnlite-320x320/1"
-    model = "https://kaggle.com/models/tensorflow/faster-rcnn-resnet-v1/frameworks/TensorFlow2/variations/faster-rcnn-resnet50-v1-640x640/versions/1"
+    # You can try to change the model here
+    model = "https://www.kaggle.com/models/tensorflow/ssd-mobilenet-v2/TensorFlow2/fpnlite-320x320/1"
+    # model = "https://kaggle.com/models/tensorflow/faster-rcnn-resnet-v1/frameworks/TensorFlow2/variations/faster-rcnn-resnet50-v1-640x640/versions/1"
     return hub.load(model)
 
 
@@ -35,9 +36,9 @@ def load_model():
 
 # App Information
 st.title("Object Detection with SSD MobileNet V2")
-st.header("Developed by: Jasmine")
+st.write("Developed by: Jasmine")
 
-app_desc = """This app uses a pre-trained mode deep learning model to detect objects in images. Users can upload an image, and the system will identify and label objects with bounding boxes and confidence scores based on the COCO dataset."""
+app_desc = """This app uses a pre-trained deep learning model to detect objects in images. Users can upload an image, and the system will identify and label objects with bounding boxes and confidence scores based on the COCO dataset."""
 
 st.write(app_desc)
 # -----------------------------
@@ -137,6 +138,7 @@ coco_labels = {
 # -----------------------------
 # Call the upload_file function
 uploaded_file, uploaded_image = upload_file()
+
 
 if uploaded_file is not None:
     # Load image with PIL and convert to RGB
