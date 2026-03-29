@@ -1,5 +1,6 @@
 import streamlit as st
 import tensorflow as tf
+import pkg_resources
 import tensorflow_hub as hub
 import numpy as np
 import cv2
