@@ -1,20 +1,7 @@
 import cv2
 import tensorflow as tf
 import numpy as np
-from tensorflow.keras.applications import MobileNetV2
-model = MobileNetV2(weights='imagenet')
 
-from tensorflow.keras.applications import InceptionV3
-model = InceptionV3(weights='imagenet')
-
-from tensorflow.keras.applications import EfficientNetB0
-model = EfficientNetB0(weights='imagenet')
-
-from tensorflow.keras.applications import DenseNet121
-model = DenseNet121(weights='imagenet')
-
-from tensorflow.keras.applications import Xception
-model = Xception(weights='imagenet')
 
 # Load the image
 image = cv2.imread('images/catdog.png')
