@@ -28,7 +28,7 @@ def upload_file():
 @st.cache_resource  # (cached for performance)
 def load_model():
     # You can try to change the model here
-    model = "https://www.kaggle.com/models/tensorflow/ssd-mobilenet-v2/TensorFlow2/fpnlite-320x320/1"
+    model ="https://www.kaggle.com/models/tensorflow/ssd-mobilenet-v2/TensorFlow2/ssd-mobilenet-v2/1"
     # model = "https://kaggle.com/models/tensorflow/faster-rcnn-resnet-v1/frameworks/TensorFlow2/variations/faster-rcnn-resnet50-v1-640x640/versions/1"
     return hub.load(model)
 
