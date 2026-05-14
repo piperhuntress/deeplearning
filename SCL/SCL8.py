@@ -91,15 +91,15 @@ predictions = model.predict(images_test)
 print(predictions[0])
 
 # Predict first test image
-predicted_label = np.argmax(predictions[5])
+predicted_label = np.argmax(predictions[0])
 
 
 print("Predicted Digit:", predicted_label)
-print("Actual Digit:", labels_test[5])
+print("Actual Digit:", labels_test[0])
 
 
 # Display Prediction Result
-plt.imshow(images_test[5], cmap="gray")
+plt.imshow(images_test[50], cmap="gray")
 plt.title(f"Predicted Digit: {predicted_label}")
 plt.axis("off")
 plt.show()
