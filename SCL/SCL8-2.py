@@ -54,27 +54,35 @@ plt.show()
 # Part II #1.	Update the model to use CNN.
 # model = models.Sequential()
 # model.add(layers.Input(shape=(28, 28, 1)))
+# 1a
 # model.add(layers.Conv2D(32, (3, 3), activation="relu"))
+# 1b
 # model.add(layers.MaxPooling2D((2, 2)))
+# 1c
 # model.add(layers.Conv2D(64, (3, 3), activation="relu"))
+# 1d
 # model.add(layers.MaxPooling2D((2, 2)))
+# 1e
 # model.add(layers.Conv2D(64, (3, 3), activation="relu"))
+# 1f
 # model.add(layers.Flatten())
+# 1g
 # model.add(layers.Dense(64, activation="relu"))
+# 1h
 # model.add(layers.Dense(10, activation="softmax"))
 
 
-# Part II #2. Model Optimization
+# Part II #2. Model Optimization (Same with Part II #1 but with added optimization)
 model = models.Sequential()
 model.add(layers.Input(shape=(28, 28, 1)))
-# use L2 regularization
+# 2b- use L2 regularization
 model.add(
     layers.Conv2D(
         32, (3, 3), activation="relu", kernel_regularizer=regularizers.l2(0.001)
     )
 )
 model.add(layers.MaxPooling2D((2, 2)))
-# add dropout
+#2a- add dropout
 model.add(layers.Dropout(0.5))
 # use L2 regularization
 
@@ -84,7 +92,7 @@ model.add(
     )
 )
 model.add(layers.MaxPooling2D((2, 2)))
-# use L2 regularization
+#2b- use L2 regularization
 model.add(
     layers.Conv2D(
         64, (3, 3), activation="relu", kernel_regularizer=regularizers.l2(0.001)
