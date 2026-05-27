@@ -51,7 +51,7 @@ plt.show()
 # model.add(layers.Dense(10, activation="softmax"))
 
 
-# Convert into a CNN
+# Part II #1.	Update the model to use CNN.
 # model = models.Sequential()
 # model.add(layers.Input(shape=(28, 28, 1)))
 # model.add(layers.Conv2D(32, (3, 3), activation="relu"))
@@ -64,7 +64,7 @@ plt.show()
 # model.add(layers.Dense(10, activation="softmax"))
 
 
-# Add Optimization Techniques
+# Part II #2. Model Optimization
 model = models.Sequential()
 model.add(layers.Input(shape=(28, 28, 1)))
 # use L2 regularization
